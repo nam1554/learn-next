@@ -43,3 +43,16 @@ The &lt;Image&gt; Component
 Creating Layouts and Pages
 
 레이아웃 파일은 애플리케이션의 모든 페이지에서 사용할 수 있는 공유 레이아웃을 만드는 가장 좋은 방법입니다.
+
+## Chapter 5
+
+Navigating Between Pages
+
+The &lt;Link&gt; component
+
+Automatic code-splitting and prefetching
+
+또한 프로덕션 환경에서 &lt;Link&gt; 구성 요소가 브라우저의 뷰포트에 나타날 때마다 Next.js는 백그라운드에서 연결된 경로에 대한 코드를 자동으로 미리 가져옵니다.
+
+Pattern: Showing active links
+'use client'; usePathname()
