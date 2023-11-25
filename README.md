@@ -56,3 +56,15 @@ Automatic code-splitting and prefetching
 
 Pattern: Showing active links
 'use client'; usePathname()
+
+## Chapter 6
+
+Setting Up Your Database
+
+vercel 에서 postgres 데이터베이스 생성
+env 파일 수정
+npm i @vercel/postgres 설치
+script "seed" 추가
+
+What is 'seeding' in the context of databases?
+-> Populating the database with an initial set of data
