@@ -37,3 +37,9 @@ The &lt;Image&gt; Component
 브라우저가 지원하는 경우 WebP 및 AVIF와 같은 최신 형식으로 이미지를 제공합니다.
 
 치수와 웹 글꼴이 없는 이미지는 레이아웃 변경의 일반적인 원인입니다.
+
+## Chapter 4
+
+Creating Layouts and Pages
+
+레이아웃 파일은 애플리케이션의 모든 페이지에서 사용할 수 있는 공유 레이아웃을 만드는 가장 좋은 방법입니다.
