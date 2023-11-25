@@ -10,3 +10,12 @@ npx create-next-app@latest nextjs-dashboard --use-npm --example "https://github.
 
 npm i
 npm run dev
+
+## Chapter 2
+
+CSS Styling
+
+Tailwind and CSS modules 2가지 방법
+home.module.css
+
+Using the clsx library to toggle class names
