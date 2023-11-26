@@ -173,3 +173,69 @@ When to use the useSearchParams() hook vs. the searchParams prop?
 npm i use-debounce
 
 Adding pagination
+
+## Chapter 12
+
+Mutating Data
+
+What are Server Actions?
+
+React Server Actions를 사용하면 서버에서 직접 비동기 코드를 실행할 수 있습니다.
+데이터를 변경하기 위해 API 엔드포인트를 생성할 필요가 없습니다.
+대신, 서버에서 실행되고 클라이언트 또는 서버 구성 요소에서 호출될 수 있는 비동기 함수를 작성합니다.
+
+Using forms with Server Actions
+
+React에서는 &lt;form&gt; 요소의 action 속성을 사용하여 액션을 호출할 수 있습니다.
+작업은 캡처된 데이터가 포함된 기본 FormData 개체를 자동으로 수신합니다.
+
+Next.js with Server Actions
+
+An advantage of invoking a Server Action within a Server Component is progressive enhancement - forms work even if JavaScript is disabled on the client.
+
+#### Creating an invoice
+
+1. Create a new route and form
+2. Create a Server Action
+
+By adding the 'use server', you mark all the exported functions within the file as server functions.
+These server functions can then be imported into Client and Server components, making them extremely versatile.
+
+You can also write Server Actions directly inside Server Components by adding "use server" inside the action. But for this course, we'll keep them all organized in a separate file.
+
+HTML에서는 action 속성에 URL을 전달합니다.
+이 URL은 양식 데이터를 제출해야 하는 대상(일반적으로 API 엔드포인트)입니다.
+
+그러나 React에서 action 속성은 특별한 prop으로 간주됩니다. 즉, React가 그 위에 액션을 호출할 수 있도록 빌드된다는 의미입니다.
+배후에서 서버 작업은 POST API 엔드포인트를 생성합니다. 이것이 바로 서버 작업을 사용할 때 API 엔드포인트를 수동으로 생성할 필요가 없는 이유입니다.
+
+3. Extract the data from formData
+
+Object.fromEntries(formData.entries());
+
+4. Validate and prepare the data
+
+zod
+
+5. Inserting the data into your database
+
+6. Revalidate and redirect
+
+#### Updating an invoice
+
+1. Create a new dynamic route segment with the invoice id.
+
+Dynamic Route Segments
+
+2. Read the invoice id from the page params.
+3. Fetch the specific invoice from your database.
+
+UUIDs vs. Auto-incrementing Keys
+
+4. Pre-populate the form with the invoice data.
+5. Update the invoice data in your database.
+
+#### Deleting an invoice
+
+이 장에서는 서버 작업을 사용하여 데이터를 변경하는 방법을 배웠습니다.
+또한 revalidatePath API를 사용하여 Next.js 캐시의 유효성을 다시 검사하고 사용자를 새 페이지로 리디렉션하도록 리디렉션하는 방법도 배웠습니다.
