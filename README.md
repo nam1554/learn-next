@@ -256,3 +256,25 @@ notFound는 error.tsx보다 우선순위가 높으므로 더 구체적인 오류
 [error.js API Reference](https://nextjs.org/docs/app/api-reference/file-conventions/error)
 [notFound() API Reference](https://nextjs.org/docs/app/api-reference/functions/not-found)
 [not-found.js API Reference](https://nextjs.org/docs/app/api-reference/file-conventions/not-found)
+
+## Chapter 14
+
+Improving Accessibility
+
+What is accessibility?
+
+form의 접근성을 개선하기 위해 이미 세 가지 작업을 수행하고 있습니다.
+
+1. Semantic HTML
+2. Labelling
+3. Focus Outline
+
+### Form validation
+
+#### Client-Side validation
+
+input prop required
+
+#### Server-Side validation
+
+useFormState
