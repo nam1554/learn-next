@@ -107,7 +107,7 @@ What is streaming?
 What is one advantage of streaming?
 -> 청크가 병렬로 렌더링되어 전체 로드 시간이 단축됩니다.
 
-loading.tsx &lt;DashboardSkeleton /&gt;;
+loading.tsx &lt;DashboardSkeleton /&gt;
 
 Fixing the loading skeleton bug with route groups
 route grorp 사용하여 loading 화면을 대시보드에만 적용
@@ -148,3 +148,28 @@ How does Partial Prerendering work?
 부분 사전 렌더링은 React의 Concurrent API를 활용하고 Suspense를 사용하여 일부 조건이 충족될 때까지(예: 데이터 로드) 애플리케이션의 렌더링 부분을 연기합니다.
 
 fallback는 다른 정적 콘텐츠와 함께 초기 정적 파일에 포함됩니다. 빌드 시(또는 유효성 재검사 중에) 경로의 정적 부분이 사전 렌더링되고 나머지 부분은 사용자가 경로를 요청할 때까지 연기됩니다.
+
+## Chapter 11
+
+Adding Search and Pagination
+
+Why use URL search params?
+
+1. 북마크 가능 및 공유 가능 URL: 검색 매개변수가 URL에 있으므로 사용자는 향후 참조 또는 공유를 위해 검색 쿼리 및 필터를 포함하여 애플리케이션의 현재 상태를 북마크할 수 있습니다.
+2. 서버 측 렌더링 및 초기 로드: URL 매개변수를 서버에서 직접 사용하여 초기 상태를 렌더링할 수 있으므로 서버 렌더링을 더 쉽게 처리할 수 있습니다.
+3. 분석 및 추적: URL에 직접 검색어와 필터가 있으면 추가 클라이언트 측 논리 없이도 사용자 행동을 더 쉽게 추적할 수 있습니다.
+
+Adding the search functionality
+
+useSearchParams
+usePathname
+useRouter
+
+When to use the useSearchParams() hook vs. the searchParams prop?
+
+&lt;Search&gt; is a Client Component, so you used the useSearchParams() hook to access the params from the client.
+&lt;Table&gt; is a Server Component that fetches its own data, so you can pass the searchParams prop from the page to the component.
+
+npm i use-debounce
+
+Adding pagination
