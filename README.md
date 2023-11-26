@@ -278,3 +278,16 @@ input prop required
 #### Server-Side validation
 
 useFormState
+
+## Chapter 15
+
+Adding Authentication
+
+Authentication verifies your identity. Authorization determines what you can access.
+
+npm install next-auth@beta
+
+openssl rand -base64 32
+
+auth.config.ts
+middleware.ts
