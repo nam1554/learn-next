@@ -81,3 +81,19 @@ What are request waterfalls?
 Parallel data fetching
 
 you can use the Promise.all() or Promise.allSettled() functions to initiate all promises at the same time
+
+## Chapter 8
+
+Static and Dynamic Rendering
+
+What is Static Rendering?
+
+1. Faster Websites
+2. Reduced Server Load
+3. SEO
+
+What is Dynamic Rendering?
+
+1. Real-Time Data
+2. User-Specific Content
+3. Request Time Information
