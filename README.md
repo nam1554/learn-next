@@ -291,3 +291,7 @@ openssl rand -base64 32
 
 auth.config.ts
 middleware.ts
+
+## Chapter 16
+
+Adding Metadata
