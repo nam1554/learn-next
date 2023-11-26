@@ -68,3 +68,16 @@ script "seed" 추가
 
 What is 'seeding' in the context of databases?
 -> Populating the database with an initial set of data
+
+## Chapter 7
+
+Fetching Data
+
+1. The data requests are unintentionally blocking each other, creating a request waterfall.
+2. By default, Next.js prerenders routes to improve performance, this is called Static Rendering. So if your data changes, it won't be reflected in your dashboard.
+
+What are request waterfalls?
+
+Parallel data fetching
+
+you can use the Promise.all() or Promise.allSettled() functions to initiate all promises at the same time
