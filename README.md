@@ -97,3 +97,36 @@ What is Dynamic Rendering?
 1. Real-Time Data
 2. User-Specific Content
 3. Request Time Information
+
+## Chapter 9
+
+Streaming
+
+What is streaming?
+
+What is one advantage of streaming?
+-> 청크가 병렬로 렌더링되어 전체 로드 시간이 단축됩니다.
+
+loading.tsx &lt;DashboardSkeleton /&gt;;
+
+Fixing the loading skeleton bug with route groups
+route grorp 사용하여 loading 화면을 대시보드에만 적용
+
+Streaming a component
+
+Suspense 이용 -> 컴포넌트 단위로 fallback 컴포넌트 노출
+
+Grouping components
+
+Deciding where to place your Suspense boundaries
+
+1. 페이지가 스트리밍될 때 사용자가 페이지를 경험하기를 원하는 방식입니다.
+2. 어떤 콘텐츠에 우선순위를 두고 싶은지.
+3. 구성요소가 데이터 가져오기에 의존하는 경우.
+
+4. loading.tsx에서 했던 것처럼 전체 페이지를 스트리밍할 수 있지만 구성 요소 중 하나의 데이터 가져오기 속도가 느린 경우 로드 시간이 더 길어질 수 있습니다.
+5. 모든 구성 요소를 개별적으로 스트리밍할 수 있지만 UI가 준비되면 화면에 갑자기 나타날 수 있습니다.(UI popping)
+6. 페이지 섹션을 스트리밍하여 staggered effect(시차 효과)를 만들 수도 있습니다. 하지만 래퍼 구성 요소를 만들어야 합니다.
+
+일반적으로 Suspense 및 데이터 가져오기 작업 시 모범 사례로 간주되는 것은 무엇입니까?
+-> data fetches(데이터 가져오기)를 필요한 구성요소로 이동
