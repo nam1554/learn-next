@@ -239,3 +239,20 @@ UUIDs vs. Auto-incrementing Keys
 
 이 장에서는 서버 작업을 사용하여 데이터를 변경하는 방법을 배웠습니다.
 또한 revalidatePath API를 사용하여 Next.js 캐시의 유효성을 다시 검사하고 사용자를 새 페이지로 리디렉션하도록 리디렉션하는 방법도 배웠습니다.
+
+## Chapter 13
+
+Handling Errors
+
+error.tsx needs to be a Client Component.
+
+It accepts two props:
+error: This object is an instance of JavaScript's native Error object.
+reset: This is a function to reset the error boundary. When executed, the function will try to re-render the route segment.
+
+notFound는 error.tsx보다 우선순위가 높으므로 더 구체적인 오류를 처리하고 싶을 때 이에 접근할 수 있습니다
+
+[Error Handling](https://nextjs.org/docs/app/building-your-application/routing/error-handling)
+[error.js API Reference](https://nextjs.org/docs/app/api-reference/file-conventions/error)
+[notFound() API Reference](https://nextjs.org/docs/app/api-reference/functions/not-found)
+[not-found.js API Reference](https://nextjs.org/docs/app/api-reference/file-conventions/not-found)
