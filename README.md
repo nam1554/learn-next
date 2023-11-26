@@ -130,3 +130,21 @@ Deciding where to place your Suspense boundaries
 
 일반적으로 Suspense 및 데이터 가져오기 작업 시 모범 사례로 간주되는 것은 무엇입니까?
 -> data fetches(데이터 가져오기)를 필요한 구성요소로 이동
+
+## Chapter 10
+
+Partial Prerendering (Optional)
+
+Combining Static and Dynamic Content
+
+현재 경로 내에서 동적 함수(예: noStore(), cookie() 등)를 호출하면 전체 경로가 동적이 됩니다.
+
+What is Partial Prerendering?
+
+부분 사전 렌더링은 일부 부분을 동적으로 유지하면서 정적 로딩 shell을 사용하여 경로를 렌더링할 수 있는 실험적 기능입니다. 즉, 경로의 동적 부분을 분리할 수 있습니다.
+
+How does Partial Prerendering work?
+
+부분 사전 렌더링은 React의 Concurrent API를 활용하고 Suspense를 사용하여 일부 조건이 충족될 때까지(예: 데이터 로드) 애플리케이션의 렌더링 부분을 연기합니다.
+
+fallback는 다른 정적 콘텐츠와 함께 초기 정적 파일에 포함됩니다. 빌드 시(또는 유효성 재검사 중에) 경로의 정적 부분이 사전 렌더링되고 나머지 부분은 사용자가 경로를 요청할 때까지 연기됩니다.
